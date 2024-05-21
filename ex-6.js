@@ -2,6 +2,18 @@ const carCollection = ["toyota", "fiat", "honda", "bmw"];
 
 function updateCarCollection(carBrand) {
   // Start coding here
+  let newCar;
+  const check = carCollection.filter((item) => {
+    return item == carBrand;
+  });
+  if (check.length == 0) {
+    newCar = "New car collection is: " + carCollection.concat(carBrand);
+  } else {
+    newCar = `${carBrand} already exists in position ${
+      carCollection.indexOf(carBrand) + 1
+    } of the car collection.`;
+  }
+  return newCar;
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case

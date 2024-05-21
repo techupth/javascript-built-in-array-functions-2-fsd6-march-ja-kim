@@ -374,4 +374,20 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const billMembers = bills
+  .filter((check) => {
+    return check.member != null;
+  })
+  .map((name) => {
+    return name.member.name;
+  });
+
+console.log(billMembers);
+
+// const billMembers = [];
+// for (let i = 0; i < bills.length; i++) {
+//   if (bills[i].member != null) {
+//     billMembers.push(bills[i].member.name);
+//   }
+// }
+// console.log(billMembers);
