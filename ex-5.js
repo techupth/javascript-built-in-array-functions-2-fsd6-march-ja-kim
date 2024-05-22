@@ -1,7 +1,12 @@
 let crimeRecordNames = ["Theodora Milenko", "Tinashe Benigno", "Mahalia Priyanka", "Maisy Sudhir"];
 
 function searchCrimeRecord(name) {
-  // Start coding here
+  if(crimeRecordNames.indexOf(name) > 0){
+    return name + " has crime record !!!"
+  }else{
+    return name + " no crime record"
+  }
+
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case
