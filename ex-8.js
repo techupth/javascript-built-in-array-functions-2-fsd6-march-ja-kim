@@ -15,6 +15,7 @@ const bills = [
         id: "2",
         transactionDate: "2021-08-01",
         total: 12298,
+
         location: "Chonburi",
         paymentType: "Cash",
         member: {
@@ -376,9 +377,10 @@ const bills = [
 // Start coding here
 
 
+// Built-in function
 let totalPaidByLocation = bills.reduce((acc, curr) => {
 console.log(curr.location)
-if (acc[curr.location] === true) {
+if (acc[curr.location]) {
     acc[curr.location] += curr.total;
     } else {
     acc[curr.location] = curr.total;
@@ -387,3 +389,15 @@ if (acc[curr.location] === true) {
 }, {});
 
 console.log("totalPaidByLocation: ", totalPaidByLocation);
+
+// For loop
+let provinceName = {}
+for(let i = 0 ; i < bills.length ; i++){
+    if(provinceName[bills[i].location]){
+        provinceName[bills[i].location] += bills[i].total
+    }else{
+        provinceName[bills[i].location] = bills[i].total
+    }
+}
+console.log(provinceName)
+    
