@@ -372,6 +372,21 @@ const bills = [
     pointRate: 0.01,
   },
 ];
-
+let count = 0 ;
 // Start coding here
-const totalMembers;
+const member = bills.filter((index) => index.member !== null).map((index) => index.location);
+console.log(member)
+const nameOnly = member.map(index2 => index2.name)
+console.log(nameOnly)
+const totalMembers = nameOnly.filter((item,index3) =>{
+  console.log(item)
+  console.log(index3)
+  console.log(nameOnly.indexOf(item))
+  if(nameOnly.indexOf(item) === index3){
+  console.log(nameOnly.indexOf(item))
+    count = count + 1
+  }
+})
+
+
+console.log("Unique Members Count: " + count)
