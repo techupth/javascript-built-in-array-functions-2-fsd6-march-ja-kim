@@ -377,8 +377,7 @@ const bills = [
 
 const totalPaidByLocation = {};
 
-const allPaid = {};
-
+// --- วิธี for loop ---
 for (let item of bills) {
   //   console.log(item.location);
   //   console.log(item.total);
@@ -389,5 +388,17 @@ for (let item of bills) {
     totalPaidByLocation[item.location] = item.total;
   }
 }
+
+// --- ใช้ Built-in ---
+
+// bills.reduce((acc, cur) => {
+//   if (acc[cur.location]) {
+//     acc[cur.location] += cur.total;
+//   } else {
+//     acc[cur.location] = cur.total;
+//   }
+
+//   return acc;
+// }, totalPaidByLocation);
 
 console.log(totalPaidByLocation);

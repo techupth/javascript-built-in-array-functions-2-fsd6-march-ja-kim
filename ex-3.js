@@ -388,3 +388,15 @@ const billMembers = console.log(
       return item.member.name;
     })
 );
+
+// ---- วิธี For loop ----
+
+// const billMembers = [];
+
+// for (let item of bills) {
+//   if (item.member !== null) {
+//     billMembers.push(item.member.name);
+//   }
+// }
+
+// console.log(billMembers);

@@ -374,7 +374,6 @@ const bills = [
 ];
 
 // Start coding here
-
 const billMembers = bills
   .filter((item) => {
     return item.member !== null;
@@ -383,6 +382,7 @@ const billMembers = bills
     return item.member.name;
   });
 
+// --- ใช้ .filter ---
 const totalMembers = console.log(
   "Unique Members Count: " +
     billMembers.filter((item, index, arr) => {
@@ -390,6 +390,7 @@ const totalMembers = console.log(
     }).length
 );
 
+// --- ใช้ .reduce ---
 // const totalMembers = console.log(
 //   "Unique Members Count: " +
 //     billMembers.reduce((acc, cur) => {
@@ -399,3 +400,21 @@ const totalMembers = console.log(
 //       return acc;
 //     }, []).length
 // );
+
+// ---- วิธี For loop ----
+
+// let uniqueMember = [];
+
+// for (let i = 0; i < billMembers.length; i++) {
+//   let isDuplicate = false;
+//   for (let index = 0; index < uniqueMember.length; index++) {
+//     if (uniqueMember[index] === billMembers[i]) {
+//       isDuplicate = true;
+//     }
+//   }
+//   if (isDuplicate === false) {
+//     uniqueMember.push(billMembers[i]);
+//   }
+// }
+
+// console.log("Unique Members Count: " + uniqueMember.length);

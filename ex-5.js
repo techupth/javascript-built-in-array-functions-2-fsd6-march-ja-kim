@@ -14,6 +14,18 @@ function searchCrimeRecord(name) {
   }
 }
 
+// ---- วิธี For loop ----
+
+// function searchCrimeRecord(name) {
+//   let result = name + " has no crime record";
+//   for (let item of crimeRecordNames) {
+//     if (item === name) {
+//       result = name + " has crime record !!";
+//     }
+//   }
+//   return result;
+// }
+
 //ผลลัพธ์ที่ควรได้จาก Example case
 //ในกรณีที่ไม่เคยมีประวัติเกี่ยวกับอาชญากรรม
 console.log(searchCrimeRecord("Dilan Sandra")); //"Dilan Sandra has no crime record"

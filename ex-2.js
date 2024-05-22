@@ -380,3 +380,14 @@ const newBills = console.log(
     return item.member !== null;
   })
 );
+
+// ---- วิธี For loop ----
+// const newBills = [];
+
+// for (let item of bills) {
+//   if (item.member !== null) {
+//     newBills.push(item);
+//   }
+// }
+
+// console.log(newBills);

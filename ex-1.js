@@ -381,3 +381,13 @@ console.log(
       return arr + cur.total;
     }, 0)
 );
+
+// ---- วิธี For loop ----
+
+// let totalBill = 0;
+
+// for (let item of bills) {
+//   totalBill += item.total;
+// }
+
+// console.log("Total bill transaction is " + totalBill.toLocaleString());
